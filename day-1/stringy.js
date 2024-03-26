@@ -23,10 +23,22 @@ function length(string) {
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+//
+//I-inputting the string as a function 
+//O-the function outputs a new string that is forced to lowercase 
+//C-input is a string that is set to lowercase 
+//E
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+    //initalize variable with camelCase 
+var newString = ''; 
+// create a for loop to process each newString in the input String 
+for (let i = 0; i < string.length; i++) {
+//convert newString to lowercase 
+newString += string[i].toLowerCase();
+}
+//return newString
+return newString; 
 
     // YOUR CODE ABOVE HERE //
 }
@@ -34,9 +46,18 @@ function toLowerCase(string) {
 /**
  * Given an input String, return a new String forced to uppercase.
  */
+//create a function nameed toUpperCase with a string 
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
+    //initalize a new variable newsString
+   var newsString = ''; 
+   //create a for loop to process each newsString in the input String
+   for (let i = 0; i < string.length; i++){
+    //create a new string to force Uppercase
+    newsString += string[i].toUpperCase();
+   }
 
+return newsString;
 
 
     // YOUR CODE ABOVE HERE //
@@ -55,9 +76,19 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+//I- toDashCase takes an input string of 'string'
+//O-output var newssString is forced dash-case
+//C- contraints input should be a string, output should be a dash-case
+//E- edge case function....
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
+    //initalize newssString
+    var newssString = '';
+//process for loop input string for dash case 
+for (let i = 0; i < string.length; i++) {
+    //create a new character
+    
+}
 
 
     // YOUR CODE ABOVE HERE //
