@@ -69,7 +69,14 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
-function modifyStrings(strings, modify) {
+/* 
+
+modifyStrings example
+
+modifyStrings(['a', 'b', 'c'], function(string) { return string.toUpperCase()}); // => ['A', 'B', 'C'] */
+
+function modifyStrings(strings, modify) { 
+
     // YOUR CODE BELOW HERE //
     
     
@@ -87,6 +94,14 @@ function modifyStrings(strings, modify) {
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
+/* allStringsPass examples
+
+allStringsPass(['alex', 'francis', 'aaron'], function(string) {return string[0] === 'a'});
+// return false (because francis doesn't begin with 'a')
+
+allStringsPass(['alex', 'arthur', 'aaron'], function(str){ return str[0] === 'a'});
+// return true (because all values begin with 'a') */
+
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     

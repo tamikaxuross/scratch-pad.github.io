@@ -86,11 +86,21 @@ function toDashCase(string) {
     var newssString = '';
 //process for loop input string for dash case 
 for (let i = 0; i < string.length; i++) {
-    //create a new character
-    
+    // Check if current character is a space
+    if (string[i] === ' ') {
+        // Replace space with dash
+        newssString += '-';
+    } else {
+        // Convert character to lowercase and add to newssString
+        newssString += string[i].toLowerCase();
+    }
+       // Return the resulting dash-case string
+       return newssString;
 }
 
 
+
+console.log(toDashCase('Hello World'));
     // YOUR CODE ABOVE HERE //
 }
 
@@ -108,8 +118,17 @@ for (let i = 0; i < string.length; i++) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
+    //if the string is empty or char is not a single character
+ //convert string and char to lowercase for case insentive comparison
+  const lowerString = string.toLowerCase();
+  const lowerChar = string.toLowerCase();
+if (lowerString.length === 0 || lowerChar.length !== 1) {
+    //return false
+    return false;
+}
+ 
+  //check if the first character of lowerString matches lowerChar
+  return lowerString.charAt(0) === lowerChar;
 
     // YOUR CODE ABOVE HERE //
 }

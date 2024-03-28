@@ -15,7 +15,9 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    return Array.isArray(value);
+  
+    //use google skills to see if there is an existing method to tell if something is an array
     
     
     // YOUR CODE ABOVE HERE //
@@ -28,15 +30,27 @@ function isArray(value) {
  * TIP: In JavaScript, how can we decipher if a value is an Object, but not 
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
- */
+ *//*
+if typeof value --- 'object && /NOT null/ && /NOT an array/ && 
+isObject({ a: 1 }); // true
+isObject([1, 2, 3]); // false
+isObject(new Date()); // false
+//isObject(null); // false  */
+
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+        return value !== null && typeof value === 'object' && !Array.isArray(value) && value !== Date;
+    }
+    console.log(isObject({ a: 1 }));
+    console.log(isObject(null));
+    console.log(isObject([1, 2, 3]));
+    console.log(isObject(new Date()));
+
+
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an input value, return true if is either an Array or an an Object 
