@@ -14,9 +14,8 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    return Array.isArray(value);
-  
+     return Array.isArray(value);
+
     //use google skills to see if there is an existing method to tell if something is an array
     
     
@@ -60,7 +59,9 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
+    return (value !== null && typeof value === 'object' && !Array.isArray(value) && value !== Date) || Array.isArray(value);
+
+
     
     
     
