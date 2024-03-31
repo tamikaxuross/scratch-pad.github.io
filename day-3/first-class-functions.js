@@ -47,12 +47,11 @@ function createLessThanFilter(base) {
  * character.
  */
 function createStartsWithFilter(startsWith) {
-      return function(string) {
+    return function(string) {
         return string.startsWith(startsWith);
     };
-    
-    // YOUR CODE ABOVE HERE //
-}
+} 
+ // YOUR CODE ABOVE HERE //
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
