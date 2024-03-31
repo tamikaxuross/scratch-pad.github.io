@@ -38,16 +38,13 @@ isObject(new Date()); // false
 
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-        return value !== null && typeof value === 'object' && !Array.isArray(value) && value !== Date;
-    }
-    console.log(isObject({ a: 1 }));
-    console.log(isObject(null));
-    console.log(isObject([1, 2, 3]));
-    console.log(isObject(new Date()));
+    return value !== null && typeof value === 'object' && !Array.isArray(value) && !(value instanceof Date);
+}
 
-
-    
-    
+console.log(isObject({ a: 1 })); // true
+console.log(isObject(null)); // false
+console.log(isObject([1, 2, 3])); // false
+console.log(isObject(new Date())); // false
     // YOUR CODE ABOVE HERE //
 
 
@@ -59,15 +56,16 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    return (value !== null && typeof value === 'object' && !Array.isArray(value) && value !== Date) || Array.isArray(value);
+    return Array.isArray(value) || (typeof value === 'object' && value !== null && Object.keys(value).length > 0);
 
-
-    
-    
-    
     // YOUR CODE ABOVE HERE //
 }
-
+console.log(isCollection({ a: 1 })); // true (Object intended as a collection)
+console.log(isCollection([1, 2, 3])); // true (Array)
+console.log(isCollection({}));
+console.log(isCollection(new Date())); // false (Date object)
+console.log(isCollection(null)); // false (null is not an Array or Object)
+console.log(isCollection(42));
 /**
  * Given an input value, return the type of the value as a String
  * 
@@ -89,13 +87,40 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
+    // Check if value is null
+    if (value === null) {
+        return 'null';
+    }
+
+    // Check if value is an array
+    if (Array.isArray(value)) {
+        return 'array';
+    }
+
+    // Check if value is a date
+    if (value instanceof Date) {
+        return 'date';
+    }
+
+    // Use typeof operator for other types
+    const type = typeof value;
+
+    // Handle special case for 'function' type
+    if (type === 'function') {
+        return 'function';
+    }
+
+    // Return the type as a string
+    return type;
+
     
     
     
     // YOUR CODE ABOVE HERE //
 }
-
+console.log(typeOf(134)); 
+console.log(typeOf("javascript"));
+console.log(typeOf([1,2,3]));
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {

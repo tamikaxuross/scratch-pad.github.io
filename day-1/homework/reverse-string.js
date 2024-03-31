@@ -21,13 +21,20 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
+    //create variable to store reversed string
+    let reversed = '';
+     // Iterate over the characters of the input string in reverse order
+     for (let i = input.length - 1; i >= 0; i--) {
+      // Concate each character to the reversed string
+      reversed += input[i];
+  
+     }
     
-    
-    
-    
+    return reversed;
     // YOUR CODE GOES ABOVE HERE //
-}
-
+    }
+   
+    console.log(reversedString); //
 
 
 
