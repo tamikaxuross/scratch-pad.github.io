@@ -12,11 +12,32 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+ // Loop through numbers from 1 to 100
+ for (let i = 1; i <= 100; i++) {
+    // Check if the number is a multiple of both 3 and 5
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz'); // Print FizzBuzz
+    }
+    // Check if the number is a multiple of 3
+    else if (i % 3 === 0) {
+        console.log('Fizz'); // Print Fizz
+    }
+    // Check if the number is a multiple of 5
+    else if (i % 5 === 0) {
+        console.log('Buzz'); // Print Buzz
+    }
+    else {
+        console.log(i); // Print the number itself
+    }
+}
+}
 
+// Call the fizzBuzz function to execute it
+fizzBuzz();
 
 
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 

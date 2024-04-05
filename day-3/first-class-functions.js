@@ -46,11 +46,15 @@ function createLessThanFilter(base) {
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
+//create function createStarWithFilter with startsWith as parameter
 function createStartsWithFilter(startsWith) {
-    return function(string) {
-        return string.startsWith(startsWith);
+    //create/return function starting 
+    return function(starting) {
+        //bracket notation to access the first character/checks first character matches 
+        return starting.startsWith(startsWith);
     };
 } 
+console.log(starting); 
  // YOUR CODE ABOVE HERE //
 
 /** 
@@ -60,8 +64,8 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    return function(string) {
-        return string.endsWith(endsWith);
+    return function(ending) {
+        return ending.endsWith(endsWith);
     };
     // YOUR CODE ABOVE HERE //
 }

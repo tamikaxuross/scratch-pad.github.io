@@ -94,10 +94,10 @@ for (let i = 0; i < string.length; i++) {
         // Convert character to lowercase and add to newssString
         newssString += string[i].toLowerCase();
     }
-       // Return the dash-case string
-       return newssString;
+      
 }
-
+ // Return the dash-case string
+       return newssString;
 
 
 console.log(toDashCase('Hello World'));

@@ -38,22 +38,48 @@ function makeContact(id, nameFirst, nameLast) {
     return { id: id, nameFirst: nameFirst, nameLast: nameLast };
 } 
 
-
+// Factory function to create a contact list object
 function makeContactList() {
-    /*
-     * You need something here to hold contacts. See length api for a hint:
-     */
-    var contacts =[];
+    var contacts = []; // Array to hold contacts
     
     return {
-        // we implemented the length api for you //
+        // Method to get the number of contacts in the list
         length: function() {
             return contacts.length;
+        },
+
+        // Method to add a contact to the list
+        addContact: function(contact) {
+            contacts.push(contact);
+        },
+
+        // Method to find a contact by full name
+        findContact: function(fullName) {
+            for (var i = 0; i < contacts.length; i++) {
+                if (contacts[i].nameFirst + ' ' + contacts[i].nameLast === fullName) {
+                    return contacts[i];
+                }
+            }
+            return undefined; // Contact not found
+        },
+
+        // Method to remove a contact from the list
+        removeContact: function(contact) {
+            var index = contacts.indexOf(contact);
+            if (index !== -1) {
+                contacts.splice(index, 1);
+            }
+        },
+
+        // Method to print all contact names with line breaks
+        printAllContactNames: function() {
+            var names = contacts.map(function(contact) {
+                return contact.nameFirst + ' ' + contact.nameLast;
+            });
+            return names.join('\n'); // Join names with line breaks
         }
-    }
+    };
 }
-
-
 
 
 // YOUR CODE GOES ABOVE HERE //

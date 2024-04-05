@@ -102,7 +102,7 @@ function typeOf(value) {
         return 'date';
     }
 
-    // Use typeof operator for other types
+    // check ysing type variable for other types
     const type = typeof value;
 
     // Handle special case for 'function' type
