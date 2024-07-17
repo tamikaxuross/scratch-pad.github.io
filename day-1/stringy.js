@@ -21,8 +21,8 @@
 
 function length(string) {
     // YOUR CODE BELOW HERE //
-
-   return strength.length;
+//use dot notation to access length of the string 
+   return string.length;
     
     // YOUR CODE ABOVE HERE //
 }
@@ -31,13 +31,21 @@ function length(string) {
  * Given an input String, return a new String forced to lowercase.
  */
 
-//I-
-//O-
-//C-
-//E-
+//I-string
+//O-new string 
+//C-returned string needs to be lowercase 
+//E-n/a
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-   
+    //initalize new string 
+    var stringNew = '';
+    //create a for loop to iterate 
+    for(let i = 0; i < string.length; i++) {
+        //convert stringNew to lowercase 
+        stringNew += string[i].toLowerCase();
+
+    }
+   return stringNew;
 
     // YOUR CODE ABOVE HERE //
 }
