@@ -15,17 +15,22 @@
 /** 
  * Given an input value, print the value to the screen using console.log().
  */
-
+//I-value
+//O-value
+//C-use console.log
+//E-none
 
 
 function print(value) {
   // YOUR CODE BELOW HERE //
+  console.log(value)
   
 
   
   // YOUR CODE ABOVE HERE //
 }
-
+//invoke the print function to print 'Tamika'
+print("Tamika")
 
 
 

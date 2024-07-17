@@ -13,13 +13,16 @@
  * work?
  */
 
-
+//I-string 
+//O- length of string
+//C-n/a
+//E-n/a
 
 
 function length(string) {
     // YOUR CODE BELOW HERE //
 
-   
+   return strength.length;
     
     // YOUR CODE ABOVE HERE //
 }
@@ -27,6 +30,11 @@ function length(string) {
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+
+//I-
+//O-
+//C-
+//E-
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
    
@@ -37,6 +45,10 @@ function toLowerCase(string) {
 /**
  * Given an input String, return a new String forced to uppercase.
  */
+//I-
+//O-
+//C-
+//E-
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 
@@ -58,6 +70,10 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+//I-
+//O-
+//C-
+//E-
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
@@ -78,6 +94,10 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+//I-
+//O-
+//C-
+//E-
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
@@ -98,6 +118,10 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+//I-
+//O-
+//C-
+//E-
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
@@ -111,6 +135,10 @@ function endsWith(string, char) {
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+//I-
+//O-
+//C-
+//E-
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
@@ -129,6 +157,10 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
+//I-
+//O-
+//C-
+//E-
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
@@ -146,6 +178,10 @@ function join(stringOne, stringTwo) {
  *
  * TIP: What property of the String do we need to compare?
  */
+//I-
+//O-
+//C-
+//E-
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
@@ -161,6 +197,10 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+//I-
+//O-
+//C-
+//E-
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
@@ -177,6 +217,10 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+//I-
+//O-
+//C-
+//E-
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
