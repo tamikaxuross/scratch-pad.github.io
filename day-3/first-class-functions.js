@@ -13,7 +13,10 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value){
+        return value > base;
+    }
+
    
     
     // YOUR CODE ABOVE HERE //
@@ -27,7 +30,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function (value){
+        return value < base;
+    };
   
     
     
@@ -42,14 +47,14 @@ function createLessThanFilter(base) {
  * This function needs to be case insensitive.
  */
 function createStartsWithFilter(startsWith) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    return function(starting) {
+            //bracket notation to access the first character/checks first character matches
+        return starting.startsWith(startsWith);
+    };
+
     // YOUR CODE ABOVE HERE //
 }
-
+console.log(starting);
 /** 
  * Given a endsWith character, which will be a single character, return a 
  * Function that tests whether a given String ends with the endsWith 
@@ -59,7 +64,9 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(ending) {
+        return ending.endsWith(endsWith);
+    };   
     
     
     
@@ -74,6 +81,7 @@ function createEndsWithFilter(endsWith) {
  * the modify Function, but we need to collect the results into some collection.
  */
 function modifyStrings(strings, modify) {
+    return strings.map(modify);
     // YOUR CODE BELOW HERE //
     
     
@@ -95,6 +103,13 @@ function modifyStrings(strings, modify) {
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
 function allStringsPass(strings, test) {
+    for (let i = 0; i < strings.length; i++) {
+        if (!test(strings[i])) {
+            return false; // If any string fails the test, return false immediately
+        }
+    }
+    return true; // If all strings pass the test, return true
+
     // YOUR CODE BELOW HERE //
     
     

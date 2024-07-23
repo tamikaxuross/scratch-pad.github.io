@@ -53,11 +53,21 @@ function toLowerCase(string) {
 /**
  * Given an input String, return a new String forced to uppercase.
  */
-//I-
-//O-
-//C-
-//E-
+//I-input string 
+//O-new string 
+//C-returned string should be uppercase
+//E- n/a
 function toUpperCase(string) {
+    //initalize new string 
+    var stringNew = '';
+    //create a for loop to iterate 
+    for(let i = 0; i < string.length; i++) {
+        //convert stringNew to upperxAE 
+        stringNew += string[i].toUpperCase();
+
+    }
+   return stringNew;
+
     // YOUR CODE BELOW HERE //
 
 
@@ -78,13 +88,31 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
-//I-
-//O-
-//C-
-//E-
+//I-string
+//O-new string 
+//C-new string must be forced with dash-case
+//E-n/a 
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+// YOUR CODE BELOW HERE /    //initalize newssString
+    var newssString = '';
+//process for loop input string for dash case
+    for (let i = 0; i < string.length; i++) {
+        // Check if current character is a space
+        if (string[i] === ' ') {
+            // Replace space with dash
+            newssString += '-';
+        } else {
+            // Convert character to lowercase and add to newssString
+            newssString += string[i].toLowerCase();
+        }
 
+    }
+    // Return the dash-case string
+    return newssString;
+
+    console.log(toDashCase('Hello World'));
+  
 
 
     // YOUR CODE ABOVE HERE //
@@ -108,7 +136,17 @@ function toDashCase(string) {
 //E-
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+//covert both string and char to lowercase
+const lowerString = string.toLowerCase();
+const lowerChar = char.toLowerCase();
+//check if the string is empty or char is not one charatcter
+if (lowerString.length === 0 || lowerChar.length !== 1) {
+    //return false
+    return false;
+}
 
+//check if the first character of lowerString matches lowerChar
+return lowerString.charAt(0) === lowerChar;
     
 
     // YOUR CODE ABOVE HERE //
@@ -132,8 +170,10 @@ function beginsWith(string, char) {
 //E-
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
+    string = string.toLowerCase();
+    char = char.toLowerCase();
+    const lastChar = string[string.length - 1];
+    return lastChar === char;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -149,7 +189,7 @@ function endsWith(string, char) {
 //E-
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -172,6 +212,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
+    return args.join('');
 
 
     // YOUR CODE ABOVE HERE //
@@ -192,6 +233,12 @@ function join(stringOne, stringTwo) {
 //E-
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+ // Compare the lengths of stringOne and stringTwo
+ if (stringOne.length >= stringTwo.length) {
+    return stringOne;
+} else {
+    return stringTwo;
+}
 
 
 
@@ -211,6 +258,13 @@ function longest(stringOne, stringTwo) {
 //E-
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    if (stringOne < stringTwo) {
+        return 1;
+    } else if (stringOne > stringTwo) {
+        return -1;
+    } else {
+        return 0;
+    }
 
 
 
@@ -231,6 +285,13 @@ function sortAscending(stringOne, stringTwo) {
 //E-
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    if (stringOne > stringTwo) {
+        return 1;
+    } else if (stringOne < stringTwo) {
+        return -1;
+    } else {
+        return 0;
+    }
 
 
 

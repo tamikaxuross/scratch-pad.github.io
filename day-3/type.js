@@ -14,9 +14,10 @@
  * 
  * HINT: There is a method that can help with this.
  */
+//use google 
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
+    return Array.isArray(value);
     
     
     
@@ -37,11 +38,8 @@ function isArray(value) {
  * 
  */
 function isObject(value) {
-    // YOUR CODE BELOW HERE //
-    
+    return value !== null && typeof value === 'object' && !Array.isArray(value) && !(value instanceof Date);
 
-    
-    
     
     // YOUR CODE ABOVE HERE //
 }
@@ -55,14 +53,15 @@ function isObject(value) {
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
 function isCollection(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    return Array.isArray(value) || (typeof value === 'object' && value !== null && Object.keys(value).length > 0);
     // YOUR CODE ABOVE HERE //
 }
-
+console.log(isCollection({ a: 1 })); 
+console.log(isCollection([1, 2, 3])); 
+console.log(isCollection({}));
+console.log(isCollection(new Date())); 
+console.log(isCollection(null)); 
+console.log(isCollection(42));
 /**
  * Given an input value, return the type of the value as a String
  * 
@@ -83,7 +82,31 @@ function isCollection(value) {
  *    typeOf([1,2,3]) -> "array"
  */ 
 function typeOf(value) {
-    // YOUR CODE BELOW HERE //
+    if (value === null) {
+        return 'null';
+    }
+
+    // Check if value is an array
+    if (Array.isArray(value)) {
+        return 'array';
+    }
+
+    // Check if value is a date
+    if (value instanceof Date) {
+        return 'date';
+    }
+
+    // check ysing type variable for other types
+    const type = typeof value;
+
+    // Handle special case for 'function' type
+    if (type === 'function') {
+        return 'function';
+    }
+
+    // Return the type as a string
+    return type;
+
     
     
     
