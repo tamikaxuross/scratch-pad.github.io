@@ -22,12 +22,24 @@
  *  c. you'll wanna make use of the push() method of Array.
  */
 function range(start, end) {
-    // YOUR CODE GOES BELOW HERE //
+    // Initialize an empty array to collect the output
+    let result = [];
     
+    // If start is less than or equal to end, we increment from start to end
+    if (start <= end) {
+        for (let i = start; i <= end; i++) {
+            result.push(i);
+        }
+    }
+    // If start is greater than end, we decrement from start to end
+    else {
+        for (let i = start; i >= end; i--) {
+            result.push(i);
+        }
+    }
     
-    
-    
-    // YOUR CODE GOES ABOVE HERE //
+    // Return the resulting array
+    return result;
 }
 
 

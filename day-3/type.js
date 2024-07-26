@@ -53,8 +53,17 @@ function isObject(value) {
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
 function isCollection(value) {
-    return Array.isArray(value) || (typeof value === 'object' && value !== null && Object.keys(value).length > 0);
-    // YOUR CODE ABOVE HERE //
+   // Check if the value is an array
+   if (Array.isArray(value)) {
+    return true;
+}
+// Check if the value is an object, not null, and not a Date instance
+if (typeof value === 'object' && value !== null && !(value instanceof Date)) {
+    return true;
+}
+// If neither condition is met, return false
+return false;
+
 }
 console.log(isCollection({ a: 1 })); 
 console.log(isCollection([1, 2, 3])); 

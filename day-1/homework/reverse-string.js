@@ -21,6 +21,17 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
+      // Initialize an empty string to collect the reversed characters
+      let reversed = "";
+    
+      // Loop through the input string starting from the last character to the first
+      for (let i = input.length - 1; i >= 0; i--) {
+          // Add each character to the reversed string
+          reversed += input[i];
+      }
+      
+      // Return the reversed string
+      return reversed;
     
     
     

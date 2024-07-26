@@ -48,8 +48,8 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     return function(starting) {
-            //bracket notation to access the first character/checks first character matches
-        return starting.startsWith(startsWith);
+        // Convert both the starting string and the startsWith character to lower case
+        return starting.toLowerCase().startsWith(startsWith.toLowerCase());
     };
 
     // YOUR CODE ABOVE HERE //
@@ -65,9 +65,9 @@ console.log(starting);
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     return function(ending) {
-        return ending.endsWith(endsWith);
-    };   
-    
+        // Convert both the ending string and the endsWith character to lower case
+        return ending.toLowerCase().endsWith(endsWith.toLowerCase());
+    };
     
     
     // YOUR CODE ABOVE HERE //
